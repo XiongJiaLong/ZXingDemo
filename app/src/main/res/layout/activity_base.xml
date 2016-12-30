@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.zxingdemo.BaseActivity">
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/openDesc"
+        android:text="开始扫描"/>
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/openDesc"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/getResult"
+        android:text="打开扫描结果"/>
+    <android.support.v4.widget.Space
+        android:layout_below="@+id/openDesc"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/openDesc"
+        android:id="@+id/mResult"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"/>
+    <WebView
+        android:layout_below="@+id/mResult"
+        android:id="@+id/mWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</RelativeLayout>
